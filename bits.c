@@ -169,7 +169,7 @@ long isPalindrome(long x) {
  */
 long bitParity(long x) {
     // divide the number into two parts, the odd and even numbers of the first
-    // half remain unchanged after the exclusive or operation( XOR operation).
+    // half remain unchanged after the exclusive or operator( XOR operator ).
     x = (x << 32) ^ x;
     x = (x << 16) ^ x;
     x = (x << 8) ^ x;
