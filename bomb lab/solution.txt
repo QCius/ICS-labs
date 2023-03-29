@@ -1,0 +1,7 @@
+We have to stand with our North Korean allies.
+0 1 1 2 3 5 
+1 4294966820 //0 < first_number < 5, many solutions like (4 0),(5 4294966996)
+40 2 //Actually solved just by gdb without knowing exact loop details.
+aaaeec
+giveup
+
