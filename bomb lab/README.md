@@ -1,5 +1,6 @@
 # Bomb lab
 It is solutions of bomb lab of csapp.
+
 phase_1: Easily we can read the data through register.
 
 phase_2: The data is stored in the stack. At this phase, the value of
