@@ -1,5 +1,4 @@
-# CSAPP
-CSAPP LAB
+# Bomb lab
 It is solutions of bomb lab of csapp.
 phase_1: Easily we can read the data through register.
 
