@@ -1,4 +1,4 @@
-# cache lab
+# Cache lab
 There are solutions of cache lab.
 
 The cache simulation was successfully resolved.
