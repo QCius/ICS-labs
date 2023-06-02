@@ -138,7 +138,6 @@ void *MapLibrary(const char *libpath)
  
     const int pagesize = getpagesize();
     uint64_t enough_allocate_size = header.e_phnum * pagesize;
-    Elf64_Addr first_offset = 0;
     void *addr = NULL;
 
     // Deal with segtions
@@ -168,13 +167,13 @@ void *MapLibrary(const char *libpath)
         // Save dynamic segmentation address
         if (seg->p_type == PT_DYNAMIC)
         {
-            lib->dyn = addr + seg->p_vaddr -first_offset;
+            lib->dyn = addr + seg->p_vaddr;
         }
 
         // Mmap load
         if (seg->p_type == PT_LOAD)
         {
-            mmap(seg->p_vaddr - first_offset + addr - dev,
+            mmap(seg->p_vaddr + addr - dev,
                  ALIGN_UP(seg->p_memsz + dev,
                           getpagesize()),
                  prot,
@@ -182,7 +181,7 @@ void *MapLibrary(const char *libpath)
                  fd,
                  ALIGN_DOWN(seg->p_offset, pagesize));
         }
-        
+
         free(seg);
     }// for
 
